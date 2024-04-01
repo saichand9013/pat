@@ -1,0 +1,15 @@
+def find_cows_bulls(secret,guess):
+    bull_cow=[0,0]
+    i=0
+    for s in secret:
+        if s in guess:
+            if secret[i]==guess[i]:
+                bull_cow[0]==1 # 0---bull count
+            else:
+                bull_cow[1]+=1   # 1 --cow count
+        i=i+1
+    return str(bull_cow[0])+"B"+str(bull_cow[1])+"C"
+secret_number=[digit for digit in input ("enter secret number")]
+guess_number=[digit for digit in input("enter the guess number")]
+ans_find_cow_bull(secret_number,guess_number)
+print(ans)
